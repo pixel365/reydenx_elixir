@@ -1,10 +1,13 @@
 defmodule Reydenx.Utils do
-  alias Reydenx.Model.{MinMaxStep, Task}
+  alias Reydenx.Model.MinMaxStep
 
+  @doc since: "0.1.0"
+  @spec http_client() :: HTTPoison
   def http_client do
     Application.get_env(:reydenx, :http_client)
   end
 
+  @doc false
   def map({k, v}) do
     case k do
       "views" ->
@@ -18,10 +21,6 @@ defmodule Reydenx.Utils do
       "online_viewers" ->
         {String.to_atom(k),
          struct(MinMaxStep, Enum.map(v, fn {k1, v1} -> {String.to_atom(k1), v1} end))}
-
-      "task" ->
-        {String.to_atom(k),
-         struct(Task, Enum.map(v, fn {k1, v1} -> {String.to_atom(k1), v1} end))}
 
       "created_at" ->
         {String.to_atom(k), str_to_datetime(v)}

@@ -24,7 +24,17 @@ defmodule Reydenx.Action do
 
       iex> {:ok, token} = Reydenx.new()
       iex> Reydenx.Action.run(token, 123456)
-      {:ok, %Reydenx.Model.ActionResult{}}
+      {:ok, %Reydenx.Model.ActionResult{
+        request_id: "",
+        order_id: 123456,
+        action: "run",
+        value: nil,
+        task: %Reydenx.Model.Task{
+          id: "h_Hg_ZWcjqRN2sd9GScBqg",
+          url: "https://api.reyden-x.com/v1/orders/123456/task/h_Hg_ZWcjqRN2sd9GScBqg/status/",
+          expires_at: "2024-07-09T09:21:29.577065+00:00"
+        }
+      }}
 
     ### Fail:
 
@@ -51,7 +61,17 @@ defmodule Reydenx.Action do
 
       iex> {:ok, token} = Reydenx.new()
       iex> Reydenx.Action.stop(token, 123456)
-      {:ok, %Reydenx.Model.ActionResult{}}
+      {:ok, %Reydenx.Model.ActionResult{
+        request_id: "",
+        order_id: 123456,
+        action: "stop",
+        value: nil,
+        task: %Reydenx.Model.Task{
+          id: "h_Hg_ZWcjqRN2sd9GScBqg",
+          url: "https://api.reyden-x.com/v1/orders/123456/task/h_Hg_ZWcjqRN2sd9GScBqg/status/",
+          expires_at: "2024-07-09T09:21:29.577065+00:00"
+        }
+      }}
 
     ### Fail:
 
@@ -78,7 +98,17 @@ defmodule Reydenx.Action do
 
       iex> {:ok, token} = Reydenx.new()
       iex> Reydenx.Action.cancel(token, 123456)
-      {:ok, %Reydenx.Model.ActionResult{}}
+      {:ok, %Reydenx.Model.ActionResult{
+        request_id: "",
+        order_id: 123456,
+        action: "cancel",
+        value: nil,
+        task: %Reydenx.Model.Task{
+          id: "h_Hg_ZWcjqRN2sd9GScBqg",
+          url: "https://api.reyden-x.com/v1/orders/123456/task/h_Hg_ZWcjqRN2sd9GScBqg/status/",
+          expires_at: "2024-07-09T09:21:29.577065+00:00"
+        }
+      }}
 
     ### Fail:
 
@@ -105,7 +135,17 @@ defmodule Reydenx.Action do
 
       iex> {:ok, token} = Reydenx.new()
       iex> Reydenx.Action.change_online(token, 123456, 1000)
-      {:ok, %Reydenx.Model.ActionResult{}}
+      {:ok, %Reydenx.Model.ActionResult{
+        request_id: "",
+        order_id: 123456,
+        action: "change:online",
+        value: nil,
+        task: %Reydenx.Model.Task{
+          id: "h_Hg_ZWcjqRN2sd9GScBqg",
+          url: "https://api.reyden-x.com/v1/orders/123456/task/h_Hg_ZWcjqRN2sd9GScBqg/status/",
+          expires_at: "2024-07-09T09:21:29.577065+00:00"
+        }
+      }}
 
     ### Fail:
 
@@ -133,7 +173,17 @@ defmodule Reydenx.Action do
 
       iex> {:ok, token} = Reydenx.new()
       iex> Reydenx.Action.change_increase(token, 123456, 1000)
-      {:ok, %Reydenx.Model.ActionResult{}}
+      {:ok, %Reydenx.Model.ActionResult{
+        request_id: "",
+        order_id: 123456,
+        action: "change:increase:value",
+        value: nil,
+        task: %Reydenx.Model.Task{
+          id: "h_Hg_ZWcjqRN2sd9GScBqg",
+          url: "https://api.reyden-x.com/v1/orders/123456/task/h_Hg_ZWcjqRN2sd9GScBqg/status/",
+          expires_at: "2024-07-09T09:21:29.577065+00:00"
+        }
+      }}
 
     ### Fail:
 
@@ -161,7 +211,17 @@ defmodule Reydenx.Action do
 
       iex> {:ok, token} = Reydenx.new()
       iex> Reydenx.Action.increase_on(token, 123456, 1000)
-      {:ok, %Reydenx.Model.ActionResult{}}
+      {:ok, %Reydenx.Model.ActionResult{
+        request_id: "",
+        order_id: 123456,
+        action: "increase:on",
+        value: nil,
+        task: %Reydenx.Model.Task{
+          id: "h_Hg_ZWcjqRN2sd9GScBqg",
+          url: "https://api.reyden-x.com/v1/orders/123456/task/h_Hg_ZWcjqRN2sd9GScBqg/status/",
+          expires_at: "2024-07-09T09:21:29.577065+00:00"
+        }
+      }}
 
     ### Fail:
 
@@ -189,7 +249,17 @@ defmodule Reydenx.Action do
 
       iex> {:ok, token} = Reydenx.new()
       iex> Reydenx.Action.increase_off(token, 123456)
-      {:ok, %Reydenx.Model.ActionResult{}}
+      {:ok, %Reydenx.Model.ActionResult{
+        request_id: "",
+        order_id: 123456,
+        action: "increase:off",
+        value: nil,
+        task: %Reydenx.Model.Task{
+          id: "h_Hg_ZWcjqRN2sd9GScBqg",
+          url: "https://api.reyden-x.com/v1/orders/123456/task/h_Hg_ZWcjqRN2sd9GScBqg/status/",
+          expires_at: "2024-07-09T09:21:29.577065+00:00"
+        }
+      }}
 
     ### Fail:
 
@@ -216,7 +286,17 @@ defmodule Reydenx.Action do
 
       iex> {:ok, token} = Reydenx.new()
       iex> Reydenx.Action.add_views(token, 123456, 1000)
-      {:ok, %Reydenx.Model.ActionResult{}}
+      {:ok, %Reydenx.Model.ActionResult{
+        request_id: "",
+        order_id: 123456,
+        action: "add:views",
+        value: nil,
+        task: %Reydenx.Model.Task{
+          id: "h_Hg_ZWcjqRN2sd9GScBqg",
+          url: "https://api.reyden-x.com/v1/orders/123456/task/h_Hg_ZWcjqRN2sd9GScBqg/status/",
+          expires_at: "2024-07-09T09:21:29.577065+00:00"
+        }
+      }}
 
     ### Fail:
 
@@ -232,6 +312,86 @@ defmodule Reydenx.Action do
   @spec add_views(token :: %Token{}, order_id :: p(), value :: p()) :: t()
   def add_views(token, order_id, value) when is_gt(value),
     do: r(token, order_id, "action/add/views/#{value}/")
+
+  @doc """
+  Change Launch Parameters
+
+  [API Documentation](https://api.reyden-x.com/docs#/Orders/change_launch_params_v1_orders__order_id__action_change_launch__patch)
+
+  ## Examples:
+
+    ### Success:
+
+      iex> {:ok, token} = Reydenx.new()
+      iex> Reydenx.Action.change_launch_mode(token, 123456, :auto)
+      {:ok, %Reydenx.Model.ActionResult{
+        request_id: "",
+        order_id: 123456,
+        action: "change:launch",
+        value: nil,
+        task: %Reydenx.Model.Task{
+          id: "h_Hg_ZWcjqRN2sd9GScBqg",
+          url: "https://api.reyden-x.com/v1/orders/123456/task/h_Hg_ZWcjqRN2sd9GScBqg/status/",
+          expires_at: "2024-07-09T09:21:29.577065+00:00"
+        }
+      }}
+
+      iex> {:ok, token} = Reydenx.new()
+      iex> Reydenx.Action.change_launch_mode(token, 123456, :manual)
+      {:ok, %Reydenx.Model.ActionResult{
+        request_id: "",
+        order_id: 123456,
+        action: "change:launch",
+        value: nil,
+        task: %Reydenx.Model.Task{
+          id: "h_Hg_ZWcjqRN2sd9GScBqg",
+          url: "https://api.reyden-x.com/v1/orders/123456/task/h_Hg_ZWcjqRN2sd9GScBqg/status/",
+          expires_at: "2024-07-09T09:21:29.577065+00:00"
+        }
+      }}
+
+      iex> {:ok, token} = Reydenx.new()
+      iex> Reydenx.Action.change_launch_mode(token, 123456, :delay, 60)
+      {:ok, %Reydenx.Model.ActionResult{
+        request_id: "",
+        order_id: 123456,
+        action: "change:launch",
+        value: 60,
+        task: %Reydenx.Model.Task{
+          id: "h_Hg_ZWcjqRN2sd9GScBqg",
+          url: "https://api.reyden-x.com/v1/orders/123456/task/h_Hg_ZWcjqRN2sd9GScBqg/status/",
+          expires_at: "2024-07-09T09:21:29.577065+00:00"
+        }
+      }}
+
+    ### Fail:
+
+      iex> {:ok, token} = Reydenx.new()
+      iex> Reydenx.Action.change_launch_mode(token, 123456, :auto)
+      {:error, %Reydenx.Model.ResponseError{
+        path: "/",
+        status_code: 404,
+        message: "Not Found"
+      }}
+  """
+  @doc since: "0.1.1"
+  @spec change_launch_mode(token :: %Token{}, order_id :: p(), mode :: :auto | :manual) :: t()
+  def change_launch_mode(token, order_id, mode)
+      when is_valid_token(token) and is_gt(order_id) and mode in [:auto, :manual] do
+    params = %{"mode" => mode, "value" => 0}
+
+    patch(token, order_id, params)
+  end
+
+  @doc since: "0.1.1"
+  @spec change_launch_mode(token :: %Token{}, order_id :: p(), mode :: :delay, value :: p()) ::
+          t()
+  def change_launch_mode(token, order_id, mode, value)
+      when is_valid_token(token) and is_gt(order_id) and is_gt(value) and mode == :delay do
+    params = %{"mode" => "delay", "value" => 0}
+
+    patch(token, order_id, params)
+  end
 
   @doc """
   Check the Task Status
@@ -262,6 +422,12 @@ defmodule Reydenx.Action do
   def task_status(token, order_id, task_id)
       when is_valid_token(token) and is_gt(order_id) and is_valid_string(task_id) do
     Client.get(token, "#{@prefix}/#{order_id}/task/#{task_id}/status/", TaskStatus)
+  end
+
+  @doc false
+  defp patch(token, order_id, params) do
+    Client.patch(token, "#{@prefix}/#{order_id}/action/change/launch/", params, ActionResult)
+    |> Response.handler(Task)
   end
 
   @doc false

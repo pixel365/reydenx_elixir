@@ -8,6 +8,7 @@ defmodule Reydenx.Response do
   @unauthorized 401
   @forbidden 403
   @not_found 404
+  @method_not_allowed 405
   @unprocessable_entity 422
   @too_many_requests 429
   @internal_error 500
@@ -16,6 +17,7 @@ defmodule Reydenx.Response do
     @unauthorized,
     @forbidden,
     @not_found,
+    @method_not_allowed,
     @unprocessable_entity,
     @internal_error
   ]
@@ -24,6 +26,7 @@ defmodule Reydenx.Response do
     "#{@unauthorized}" => "Unautorized",
     "#{@forbidden}" => "Forbidden",
     "#{@not_found}" => "Not Found",
+    "#{@method_not_allowed}" => "Method Not Allowed",
     "#{@unprocessable_entity}" => "Unprocessable Entity",
     "#{@internal_error}" => "Internal Error"
   }
