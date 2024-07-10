@@ -7,7 +7,7 @@ Reyden-X is an automated service for promoting live broadcasts on external sites
 ```elixir
 def deps do
   [
-    {:reydenx, "~> 0.1.1"}
+    {:reydenx, "~> 0.1.2"}
   ]
 end
 ```

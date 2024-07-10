@@ -17,4 +17,6 @@ defmodule Reydenx.Guards do
            when is_struct(token) and map_get(:__struct__, token) == Token
 
   defguard is_gt(lhs, rhs \\ 0) when is_integer(lhs) and is_integer(rhs) and lhs > rhs
+
+  defguard is_lt(lhs, rhs \\ 0) when is_integer(lhs) and is_integer(rhs) and lhs < rhs
 end

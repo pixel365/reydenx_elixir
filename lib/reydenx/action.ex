@@ -378,17 +378,18 @@ defmodule Reydenx.Action do
   @spec change_launch_mode(token :: %Token{}, order_id :: p(), mode :: :auto | :manual) :: t()
   def change_launch_mode(token, order_id, mode)
       when is_valid_token(token) and is_gt(order_id) and mode in [:auto, :manual] do
-    params = %{"mode" => mode, "value" => 0}
+    params = %{"mode" => mode, "delay_time" => 0}
 
     patch(token, order_id, params)
   end
 
   @doc since: "0.1.1"
-  @spec change_launch_mode(token :: %Token{}, order_id :: p(), mode :: :delay, value :: p()) ::
+  @spec change_launch_mode(token :: %Token{}, order_id :: p(), mode :: :delay, delay_time :: p()) ::
           t()
-  def change_launch_mode(token, order_id, mode, value)
-      when is_valid_token(token) and is_gt(order_id) and is_gt(value) and mode == :delay do
-    params = %{"mode" => "delay", "value" => 0}
+  def change_launch_mode(token, order_id, mode, delay_time)
+      when is_valid_token(token) and is_gt(order_id) and is_gt(delay_time, 4) and
+             is_lt(delay_time, 241) and mode == :delay do
+    params = %{"mode" => "delay", "delay_time" => delay_time}
 
     patch(token, order_id, params)
   end
